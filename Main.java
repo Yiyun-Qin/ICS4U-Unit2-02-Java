@@ -1,4 +1,3 @@
-import java.util.Scanner;
 /**
  * This is the standard Main() class starting point.
  *
@@ -8,8 +7,6 @@ import java.util.Scanner;
  */
 
 final class Main {
-  static String someNumberString;
-  static int someNumber;
   /**
    * Prevent instantiation.
    * Throw an exception IllegalStateException.
@@ -29,18 +26,19 @@ final class Main {
    */
   public static void main(final String[] args) {
     MrCoxallStack newStack = new MrCoxallStack();
-    Scanner myobj = new Scanner(System.in);
-    System.out.print("Enter an integer: ");
-    someNumberString = myobj.next();
-    try {
-      someNumber = Integer.parseInt(someNumberString);
-      newStack.push(someNumber);
-      newStack.showStack();
-    } catch (Exception e) {
-      System.out.println("Invalid number!");
-    } finally {
-      System.out.println("\nDone.");
-    }
+    System.out.println("The first number is 12.");
+    newStack.push(12);
+    System.out.println(newStack.getStack());
+
+    System.out.println("The second number is 18.");
+    newStack.push(18);
+    System.out.println(newStack.getStack());
+
+    System.out.println("\nPop out the first item in the stack.");
+    newStack.pop();
+    System.out.println(newStack.getStack());
+
+    System.out.println("\nDone.");
   }
 }
 

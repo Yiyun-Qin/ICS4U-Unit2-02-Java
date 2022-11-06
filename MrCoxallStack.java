@@ -14,22 +14,31 @@ public class MrCoxallStack {
    *
    */
   List<String> stackAsList = new ArrayList<String>();
+
   /**
-   * The push() function.
+   * The getStack() getter.
+   *
+   * @return stackAsList
+   */
+  public List<String> getStack() {
+    return stackAsList;
+  }
+
+  /**
+   * The push() setter.
    *
    */
 
   public void push(int someNumber) {
     stackAsList.add(String.valueOf(someNumber));
   }
-  
+
   /**
-   * The show() function.
+   * The pop() setter.
    *
    */
-
-  public void showStack() {
-    System.out.println(stackAsList);
+  public void pop() {
+    int index = stackAsList.size() - 1;
+    stackAsList.remove(index);
   }
 }
-
